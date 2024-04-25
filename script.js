@@ -100,3 +100,19 @@ for (let participante of participantes) {
 }
 
 atualizarLista(participantes)
+
+const adicionarParticipante = (event) => {
+    event.preventDefault()
+
+    const dadosDoFormulario = new FormData(event.target)
+
+    const participante = {
+        nome: dadosDoFormulario.get('nome'),
+        email: dadosDoFormulario.get('email'),
+        dataInscricao: new Date(),
+        dataCheckIn: null
+    }
+
+    participantes = [participante, ...participantes]
+    atualizarLista(participantes)
+}
