@@ -4,12 +4,29 @@
     box-sizing: border-box;
 }
 :root{
-    --border: 1px solid #1fb71c; 
+    --border: 1px solid #6c756c; 
 }
 
 body, table, input, button{
-   font: 300 16px/140% 'Poppins', sans-serif;
+    background-color: #d9fad8;
+    font: 300 16px/140% 'Poppins', sans-serif;
+    
 }
+
+
+.container{
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 20px 32px;
+    border: 1px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    
+}
+
+header{
+    padding: 20px 0;
+    }
 
 form{
     border: var(--border);
@@ -20,6 +37,14 @@ form{
 fieldset {
     border:none
 }
+fieldset legend{
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    color: #059e02;  
+    font: 700 25px/24px 'Poppins', sans-serif; 
+    margin-bottom: 15px;
+}
 
 fieldset div>{
     display: flex;
@@ -27,12 +52,32 @@ fieldset div>{
 }
 .input-wrapper{
  flex: 1;   
-
+ display: inline-block;
+ align-items: center;
+ gap: 12px;
+ border: var(--border);
+ border-radius: 10px;
+ padding: 8px 12px;
+ font: 400 14px/150% 'Poppins', sans-serif;
+ color: #cfffce;
 }
 
-header{
-padding: 20px 0;
+fieldset button{
+    width: fit-content;
+    border: 0;
+    background-color: #059e02;
+    color: #ffff;
+    border-radius: 10px;
+    padding: 7px 20px;
+    font: 700 12px/24px 'Poppins', sans-serif;
+}
 
+fieldset button:hover{
+background-color: #44e942;
+}
+
+input{
+  all: unset;  
 }
 
 table{
@@ -40,7 +85,7 @@ table{
 }
 
 table thead{
-    font-size: 14px;
+    font-size: 18px;
     line-height: 16px;
     color: #059e02;
 }
@@ -57,7 +102,7 @@ tbody td{
 }
 
 tbody td strong{
-    color: #059e02;
+    color: #2c2c2c;
     font-size: 14px;
     line-height: 16px;
     font-weight: 600;
@@ -68,8 +113,10 @@ tbody td small {
 }
 tbody td button{
    all: unset; 
-   color: #cfffce;
+   color: #ffff;
    background-color: #059e02;
+   padding: 5px;
+   border-radius: 5px;
 
 }
 
